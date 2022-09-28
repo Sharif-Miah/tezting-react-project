@@ -2,7 +2,7 @@ import React from 'react';
 import './SingleStudy.css'
 
 const SingleStudy = (props) => {
-    console.log(props.study);
+    // console.log(props.study);
     const { image, subject, describe, time } = props.study
 
     return (

@@ -31,6 +31,9 @@
     margin: 0;
 }
 
+.break-heading {
+    margin: 60px 0;
+}
 
 .break-cal {
     padding: 18px 12px;
@@ -41,4 +44,8 @@
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
+}
+
+.exercise-heading {
+    margin-top: 100px;
 }

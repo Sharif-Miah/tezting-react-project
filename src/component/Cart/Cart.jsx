@@ -1,7 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import './Cart.css'
 
 const Cart = () => {
+
+    const [free, setFree] = useState(0)
+
+    const handleClick = (id) => {
+        setFree(id)
+    }
+
+    console.log(free);
     return (
         <div>
             <div className='d-flex'>
@@ -26,15 +35,19 @@ const Cart = () => {
                 </div>
             </div>
 
-            <h2>Add To Break</h2>
+            <h2 className='break-heading'>Add To Break</h2>
 
             <div className='d-flex'>
-                <button className='break-cal'>5m</button>
-                <button className='break-cal'>10m</button>
-                <button className='break-cal'>15m</button>
-                <button className='break-cal'>20m</button>
+                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>5m</button>
+                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>10m</button>
+                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>15m</button>
+                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>20m</button>
             </div>
-            <h1>Exercise Details</h1>
+            <h1 className='exercise-heading' >Exercise Details</h1>
+
+            <div className='d-flex'>
+                <h3>Study Time: {free}</h3>
+            </div>
 
         </div>
     );
