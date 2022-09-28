@@ -6,8 +6,8 @@ const Cart = () => {
 
     const [free, setFree] = useState(0)
 
-    const handleClick = (id) => {
-        setFree(id)
+    const handleClick = (time) => {
+        setFree(time)
     }
 
     console.log(free);
@@ -38,15 +38,17 @@ const Cart = () => {
             <h2 className='break-heading'>Add To Break</h2>
 
             <div className='d-flex'>
-                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>5m</button>
-                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>10m</button>
-                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>15m</button>
-                <button onClick={(e) => handleClick(e.target.value)} className='break-cal'>20m</button>
+                <button onClick={() => handleClick(5)} className='break-cal'>5m</button>
+                <button onClick={() => handleClick(10)} className='break-cal'>10m</button>
+                <button onClick={() => handleClick(15)} className='break-cal'>15m</button>
+                <button onClick={() => handleClick(20)} className='break-cal'>20m</button>
             </div>
             <h1 className='exercise-heading' >Exercise Details</h1>
 
-            <div className='d-flex'>
-                <h3>Study Time: {free}</h3>
+            <div>
+                <h3>Study Time: </h3>
+                <br />
+                <h3>Break: {free}</h3>
             </div>
 
         </div>
