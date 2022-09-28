@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Cart from '../Cart/Cart';
 import SingleStudy from '../SingleStudy/SingleStudy';
 import './Main.css'
 
@@ -28,7 +29,7 @@ const Main = () => {
             </div>
 
             <div className="cart-site">
-                <h1>This is Cart site</h1>
+                <Cart />
             </div>
         </div>
     );

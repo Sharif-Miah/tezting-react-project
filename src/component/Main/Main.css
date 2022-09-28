@@ -1,10 +1,11 @@
 .main-container {
     display: grid;
     grid-template-columns: 4fr 1fr;
+    padding-bottom: 80px;
 }
 
 .study-cart-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    gap: 30px;
 }

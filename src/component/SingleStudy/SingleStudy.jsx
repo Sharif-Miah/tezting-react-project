@@ -10,10 +10,10 @@ const SingleStudy = (props) => {
             <img className='study-img' src={image} alt="" />
             <div className='text'>
                 <h2>{subject}</h2>
-                <p><small>{describe}</small></p>
                 <h4> Time: {time} Minute</h4>
-                <button className='list-btn'>Add to list</button>
+                <p>{describe}</p>
             </div>
+            <button className='list-btn'>Add to list</button>
 
         </div>
     );
