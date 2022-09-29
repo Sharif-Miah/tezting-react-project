@@ -2,21 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 import './Cart.css'
 
-const Cart = () => {
+const Cart = ({ studyTime, setStudyTime }) => {
 
+    // console.log(studyTime);
     const [free, setFree] = useState(0)
 
     const handleClick = (time) => {
         setFree(time)
     }
 
-    console.log(free);
+    // console.log(free);
     return (
         <div>
             <div className='d-flex'>
                 <img className='my-img' src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvczkzLXBhLTU3OThfMS5wbmc.png?s=sbMLk1eiRzQUOrMIRvmZPgG2eK7zXEBeeLefvv7JzDY" alt="" />
                 <div className='info'>
-                    <h4 >Farhan Sharif</h4>
+                    <h4>Farhan Sharif</h4>
                     <span>Narsingdi, Dhaka</span>
                 </div>
             </div>
@@ -46,8 +47,8 @@ const Cart = () => {
             <h1 className='exercise-heading' >Exercise Details</h1>
 
             <div>
-                <h3>Study Time: </h3>
-                <br />
+                {/* <h3>Study Time:</h3> */}
+
                 <h3>Break: {free}</h3>
             </div>
 

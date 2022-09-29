@@ -1,9 +1,22 @@
 import React from 'react';
 import './SingleStudy.css'
 
-const SingleStudy = (props) => {
-    // console.log(props.study);
-    const { image, subject, describe, time } = props.study
+const SingleStudy = ({ study, studyTime, setStudyTime }) => {
+    // console.log(study);
+    const { image, subject, describe, time } = study
+
+    const showData = () => {
+        const info = {
+            time
+        }
+        if (studyTime) {
+            setStudyTime([...studyTime, info])
+        } else {
+            setStudyTime(info)
+        }
+    }
+
+    // console.log(studyTime);
 
     return (
         <div className='single-cart '>
@@ -13,7 +26,7 @@ const SingleStudy = (props) => {
                 <h4> Time: {time} Minute</h4>
                 <p>{describe}</p>
             </div>
-            <button className='list-btn'>Add to list</button>
+            <button onClick={showData} className='list-btn'>Add to list</button>
 
         </div>
     );
